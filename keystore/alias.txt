@@ -1,0 +1,4 @@
+Suvi Ride Rider Alias and Password
+
+Alias - riderkey
+Password - riderkey

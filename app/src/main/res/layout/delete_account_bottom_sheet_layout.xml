@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sheet_dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/choosetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Delete Account"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Are you sure you want to delete your account? All your Personal data will be lost"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11ssp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_cancel_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Cancel"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_delete_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Yes, Delete It"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

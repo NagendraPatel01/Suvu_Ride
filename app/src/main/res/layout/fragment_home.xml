@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/rlStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="16">
+
+
+            <LinearLayout
+                android:id="@+id/llRides"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Remaining Rides"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvRemainingRides"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Total Rides"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalRides"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRideStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvRideStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sStatus"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Offline"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/SCBSwitch" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlStatus"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/llFeatures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="end|bottom"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivNavigator"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_navigator"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivCall"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/iv_call"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivCurrentLocation"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/current_location_icon" />
+
+            <com.example.swipebutton_library.SwipeButton
+                android:id="@+id/ivEndRide"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:button_background_drawable="@drawable/circular_white_background"
+                app:button_background_padding="12dp"
+                app:button_background_src="@drawable/checkmark_white"
+                app:button_background_tint="@android:color/holo_red_light"
+                app:button_height="40dp"
+                app:button_width="40dp"
+                app:has_active_status="false"
+                app:inner_text="Emergency Ride End"
+                app:inner_text_color="@android:color/holo_red_light"
+                app:inner_text_gravity="center"
+                app:inner_text_padding="8dp"
+                app:inner_text_size="16sp"
+                app:outer_background_drawable="@drawable/circular_white_background"
+                app:outer_background_height="40dp"
+                app:outer_background_tint="@color/white"
+                app:trail_enabled="false" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

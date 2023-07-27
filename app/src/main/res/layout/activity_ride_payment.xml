@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    tools:context=".ui.ride_payment.RidePaymentActivity">
+
+    <LinearLayout
+        android:id="@+id/llCollectPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <TextView
+            android:id="@+id/tvCollectPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Collect Payment"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="₹ 100"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="26-07-2023 / 10:23 AM"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/ui_bg"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:paddingVertical="@dimen/_11sdp">
+
+            <ImageView
+                android:id="@+id/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:src="@drawable/green_dot1_img"
+                app:layout_constraintBottom_toBottomOf="@id/tvPickupAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvPickupAddress" />
+
+            <ImageView
+                android:id="@+id/ivLine"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/line_img"
+                app:layout_constraintBottom_toTopOf="@id/red"
+                app:layout_constraintEnd_toEndOf="@id/green"
+                app:layout_constraintStart_toStartOf="@id/green"
+                app:layout_constraintTop_toBottomOf="@id/green" />
+
+            <ImageView
+                android:id="@+id/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPickupAddress"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:src="@drawable/red_dot1_img"
+                app:layout_constraintBottom_toBottomOf="@id/tvDropAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDropAddress" />
+
+            <TextView
+                android:id="@+id/tvDropAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_toRightOf="@id/green"
+                android:fontFamily="@font/roboto_regular"
+                android:text="114,115 1st Floor, Milinda Manor Above BATA Showroom Opposite Next Treasure Island"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvPickupAddress"
+                app:layout_constraintTop_toBottomOf="@id/viewOfCollectPayment" />
+
+            <View
+                android:id="@+id/viewOfCollectPayment"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvDropAddress"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_toRightOf="@+id/ivLine"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/tvPickupAddress"
+                app:layout_constraintStart_toStartOf="@id/tvPickupAddress"
+                app:layout_constraintTop_toBottomOf="@id/tvPickupAddress" />
+
+
+            <TextView
+                android:id="@+id/tvPickupAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewOfCollectPayment"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@id/red"
+                android:fontFamily="@font/roboto_regular"
+                android:text="114,115 1st Floor, Milinda Manor Above BATA Showroom Opposite Next Treasure Island"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/green"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/yellow"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Received"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

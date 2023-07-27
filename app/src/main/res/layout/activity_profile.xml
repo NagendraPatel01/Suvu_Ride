@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:paddingHorizontal="@dimen/_10sdp"
+    tools:context=".ui.personal_details.ProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="Personal Details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlHeader">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivUserPic"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/profile_icon" />
+
+            <ImageView
+                android:id="@+id/ivCameraIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_camera" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Edit Profile"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/user_input_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Mobile Number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+        <EditText
+            android:id="@+id/edtUserNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/user_input_bg"
+            android:editable="false"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Address"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+        <EditText
+            android:id="@+id/edtUseraddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/user_input_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="3"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/yellow"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95">
+
+        <TextView
+            android:id="@+id/tvUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Update"
+            android:textColor="@color/btn_text"
+            android:textSize="@dimen/_12ssp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:id="@+id/llDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/delete_icon" />
+
+            <TextView
+                android:id="@+id/tvDeleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:drawableRight="@drawable/ic_next1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Request To Delete Account"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/_14ssp" />
+
+            <!-- <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/ic_next" />-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

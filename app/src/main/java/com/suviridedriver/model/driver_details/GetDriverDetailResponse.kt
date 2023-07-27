@@ -1,0 +1,31 @@
+package com.suviridedriver.model.driver_details
+
+data class GetDriverDetailResponse(
+    val Status: String,
+    val __v: Int,
+    val _id: String,
+    val angle: Float,
+    val autoVerified: Boolean,
+    val city: Any,
+    val createdAt: String,
+    val deviceToken: String,
+    val discountOffer: Any,
+    val drivingLicence: DrivingLicence,
+    val isAvailable: Boolean,
+    val isDeleted: Boolean,
+    val language: String,
+    val lastLocationUpdate: String,
+    val mobileNumber: Long,
+    val passengerCapacity: Int,
+    val paymentVerification: String,
+    val profilePhoto: String,
+    val state: Any,
+    val takeSelfie: TakeSelfie,
+    val token: Any,
+    val updatedAt: String,
+    val vehicleType: String,
+    val vehiclesDetails: VehiclesDetails,
+    val verificationStatus: String,
+    val remainingRides: Int,
+    val totalRides: Int
+)

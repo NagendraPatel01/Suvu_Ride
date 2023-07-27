@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sheet_dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvLogoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLogoutMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/_11sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvGoBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_cancel_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Go Back"
+            android:textColor="@color/btn_text"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_call_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Logout"
+            android:textColor="@color/btn_text"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

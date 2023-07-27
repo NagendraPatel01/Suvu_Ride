@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/theme_color"
+    android:paddingRight="@dimen/_12sdp"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:layout_height="@dimen/_60sdp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/registration_uncheck" />
+
+        <ImageView
+            android:id="@+id/aboveImg"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_above="@id/status"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:src="@drawable/dash1_svg" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:id="@+id/bottomImg"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/status"
+            android:src="@drawable/dash1_svg"
+            android:scaleType="center"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width= "0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_dl"
+        android:layout_weight="8"
+        android:layout_marginVertical="@dimen/_4sdp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:background="@drawable/filed_bg"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:id="@+id/img"
+            android:src="@drawable/reg_img11" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driving Licence"
+                android:textColor="@color/white"
+                android:id="@+id/title"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/roboto_medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Your Driving Licence Details"
+                android:textColor="@color/type_2"
+                android:id="@+id/description"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_8ssp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:id="@+id/iv_back"
+            android:padding="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Registration"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="Please follow below steps to register"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_12ssp"
+        android:layout_below="@+id/relativeLayout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView9"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_above="@id/cvContinue"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_19sdp"
+        android:padding="@dimen/_10sdp"
+        android:onClick="onContinue"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Next"
+            android:background="@color/gray"
+            android:textColor="@color/btn_text"
+            android:textSize="@dimen/_12ssp" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

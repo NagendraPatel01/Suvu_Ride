@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    tools:context=".ui.language.LanguageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/cvContinue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/choose_language_image" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:fontFamily="@font/baloo_2_bold"
+            android:gravity="center"
+            android:text="Welcome to Suvi Ride"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_24ssp" />
+
+        <TextView
+            android:id="@+id/tvLangugeLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start"
+            android:text="Choose Language"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLanguageList"
+            android:layout_width="match_parent"
+            style="@style/scrollbar_style"
+            android:layout_height="@dimen/_150sdp" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/yellow"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9">
+
+        <TextView
+            android:id="@+id/tvContinue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Continue"
+            android:textColor="@color/btn_text"
+            android:textSize="@dimen/_13ssp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

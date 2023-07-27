@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    tools:context=".ui.confirm_otp.ConfirmOTPActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:padding="@dimen/_20sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/iv_back"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_62sdp"
+        android:layout_below="@+id/iv_back"
+        android:backgroundTint="@color/blue"
+        app:cardCornerRadius="@dimen/_31sdp"
+        android:id="@+id/image"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ride_otp_svg"
+            android:layout_gravity="center"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:text="OTP Verification"
+        android:id="@+id/tv1"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:text="Please enter the OTP"
+        android:id="@+id/tv2"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/white"
+        android:layout_marginVertical="@dimen/_6sdp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv2"
+        android:layout_marginHorizontal="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:weightSum="6">
+
+        <EditText
+            android:id="@+id/etOtp1st"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/before_otp_bg"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtp2nd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/before_otp_bg"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtp3rd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/before_otp_bg"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtp4th"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/before_otp_bg"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtp5th"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/before_otp_bg"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtp6th"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_weight="1"
+            android:background="@drawable/before_otp_bg"
+            android:elevation="@dimen/_5sdp"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_14sdp"
+        android:text="Verify"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:paddingVertical="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/_14sdp" />
+</RelativeLayout>

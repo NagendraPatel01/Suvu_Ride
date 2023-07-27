@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:paddingHorizontal="@dimen/_10sdp"
+    tools:context=".ui.update_personal_details.UpdateProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="Update Personal Details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/user_input_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Richa Sharma"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Mobile Number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+        <EditText
+            android:id="@+id/edtUserNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/user_input_bg"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="8085300369"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/yellow"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95">
+
+        <TextView
+            android:id="@+id/tvUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Update"
+            android:textColor="@color/btn_text"
+            android:textSize="@dimen/_12ssp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    tools:context=".ui.vehicle_detail.VehicleDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Vehicles Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottom"
+            android:layout_below="@+id/rlTop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLevelGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle Type"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+                <Spinner
+                    android:id="@+id/spinnerVehicleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/bg_spinner"
+                    android:padding="@dimen/_5sdp"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLevelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle Model Name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+                <EditText
+                    android:id="@+id/edtVehicleModelNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/user_input_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLevelLicenceNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Registration ID"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+                <EditText
+                    android:id="@+id/etdRegistrationID"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/user_input_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLevelIssuedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Date of Registration"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvDOR"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/user_input_bg"
+                    android:drawableEnd="@drawable/ic_calender"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:hint="DD-MM-YYYY"
+                    android:textColorHint="@color/light_gray"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLevelValiditiy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Registration Validity"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvDORV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/user_input_bg"
+                    android:drawableEnd="@drawable/ic_calender"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:hint="DD-MM-YYYY"
+                    android:textColorHint="@color/light_gray"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Upload your Registration card Front and Back Photo"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="visible" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="Next"
+                    android:textColor="@color/btn_text"
+                    android:textSize="@dimen/_12ssp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlUploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlTop"
+            android:layout_centerInParent="true"
+            android:background="@color/theme_color"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/upload_iv_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:text="Upload a photo of Registration card "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:text="Please ID On a plain surface and make sure all four corners visible."
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:id="@+id/ivDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginHorizontal="@dimen/_35sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/iv_rc_card" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardCornerRadius="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/tvUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:text="Upload"
+                        android:textColor="@color/btn_text"
+                        android:textSize="@dimen/_12ssp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

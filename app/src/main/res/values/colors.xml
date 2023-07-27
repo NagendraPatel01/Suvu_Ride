@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    App colors-->
+    <color name="theme_color">#0D1B35</color>
+    <color name="btn_text">#060D18</color>
+    <color name="yellow">#FFE767</color>
+    <color name="bottom_navigation_color">#1F2F4B</color>
+    <color name="gray">#ADADAD</color>
+    <color name="light_gray">#C6C6C6</color>
+    <color name="dark_gray">#747474</color>
+    <color name="blue">#415A8B</color>
+    <color name="payment_card_color">#1F2F4B</color>
+    <color name="text_blue">#014FAB</color>
+    <color name="dark_blue">#060D18</color>
+    <color name="user_profile_theme">#1F2F4B</color>
+    <color name="green">#00B232</color>
+    <color name="coupon_color">#1F2F4B</color>
+    <color name="auto_detail_card_color">#EDEDED</color>
+    <color name="item_card_color">#1F2F4B</color>
+
+    <color name="type_2">#FF747474</color>
+    <color name="dark_green">#00A62F</color>
+    <color name="dark_gray_shade">#3E3E3E</color>
+</resources>

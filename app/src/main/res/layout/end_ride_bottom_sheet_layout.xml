@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sheet_dialog_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+
+        <ImageView
+            android:id="@+id/ivCustomerProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/profile_icon"></ImageView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Richa Sharma"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:id="@+id/llRate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:id="@+id/ivStartRating_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_star_fade"/>
+
+                    <ImageView
+                        android:id="@+id/ivStartRating_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_star_fade"/>
+
+                    <ImageView
+                        android:id="@+id/ivStartRating_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_star_fade"/>
+
+                    <ImageView
+                        android:id="@+id/ivStartRating_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_star_fade"/>
+
+                    <ImageView
+                        android:id="@+id/ivStartRating_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_star_fade"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Estimated Price"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tvRideFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/ride_address_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2.5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/green_dot_img" />
+
+            <ImageView
+                android:id="@+id/bottomImg"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_below="@id/status"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="3"
+                android:scaleType="center"
+                android:src="@drawable/dash1_svg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/red_dot_img" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2.5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPickupAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvDropAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:weightSum="2">
+
+        <!--<TextView
+            android:id="@+id/tvEndRide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="2"
+            android:background="@drawable/btn_ride_accept_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="End Ride"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />-->
+
+        <id.ss564.lib.slidingbutton.SlidingButton
+            android:id="@+id/tvEndRide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="2"
+            android:background="@drawable/btn_ride_accept_bg"
+            android:fontFamily="@font/roboto_medium"
+
+            android:gravity="center"
+            app:sliding_button_background="#00A62F"
+            app:sliding_button_icon="@drawable/group_9712"
+            app:sliding_button_icon_tint="@color/white"
+            app:sliding_showTrack="true"
+            app:sliding_text="End Ride"
+            app:sliding_text_color="@color/white"
+            app:sliding_text_size="@dimen/_14ssp"
+            app:sliding_trackBackground="#00A62F" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
